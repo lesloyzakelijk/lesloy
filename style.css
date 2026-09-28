@@ -158,3 +158,56 @@ footer{background:var(--ink);color:var(--paper);padding:50px 4vw;display:grid;gr
   .mobile-nav a{font:70px/.82 Anton;text-transform:uppercase;border-bottom:2px solid #111;padding:10px 0}
   .menu{position:relative;z-index:25}
 }
+
+/* LESLOY inner pages */
+.page-hero{min-height:68vh;padding:150px 4vw 60px;display:flex;align-items:end;position:relative;overflow:hidden;border-bottom:2px solid #111}
+.page-hero .eyebrow{position:absolute;top:120px;left:4vw;font-size:11px;font-weight:900;letter-spacing:.12em}
+.page-hero h1{font:clamp(110px,20vw,300px)/.72 Anton;margin:0;letter-spacing:-.055em;position:relative;z-index:2}
+.page-hero .hero-shape{position:absolute;width:32vw;height:32vw;right:7vw;top:15%;background:var(--acid);border:3px solid #111;transform:rotate(8deg)}
+.page-hero .hero-shape:after{content:"LESLOY";position:absolute;font:clamp(80px,13vw,210px) Anton;color:transparent;-webkit-text-stroke:2px #111;transform:rotate(-8deg);left:-10%;top:15%}
+.page-wrap{padding:80px 4vw}
+.page-intro{display:grid;grid-template-columns:1fr 1.5fr;gap:8vw;margin-bottom:80px}
+.page-intro h2{font:clamp(65px,8vw,125px)/.78 Anton;margin:0}
+.page-intro p{font-size:18px;line-height:1.6;max-width:650px}
+.release-list{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.release-card{border:2px solid #111;background:#111;color:#fff;min-height:470px;position:relative;overflow:hidden}
+.release-card .cover{height:100%;position:absolute;inset:0}
+.release-card .cover:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 30%,rgba(0,0,0,.88))}
+.release-card .cover .art{position:absolute;left:8%;bottom:12%;z-index:2;font:clamp(65px,8vw,125px)/.75 Anton;color:#fff;transform:rotate(-5deg)}
+.release-card .meta{position:absolute;z-index:3;left:24px;right:24px;bottom:22px;display:flex;justify-content:space-between;align-items:end}
+.release-card .meta small{font-size:10px;font-weight:900}
+.release-card .meta a{background:var(--acid);color:#111;border:2px solid #111;padding:12px 15px;font-size:10px;font-weight:900}
+.video-grid{display:grid;grid-template-columns:1.4fr .8fr;gap:18px}
+.video-card{position:relative;min-height:430px;border:2px solid #111;overflow:hidden;background:#111}
+.video-card img{transition:.6s}
+.video-card:hover img{transform:scale(1.04)}
+.video-card:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 45%,rgba(0,0,0,.82))}
+.video-card .video-copy{position:absolute;z-index:2;bottom:25px;left:25px;color:#fff}
+.video-card h3{font:65px/.8 Anton;margin:5px 0}
+.video-card span{font-size:10px;font-weight:900}
+.video-card .play{position:absolute;z-index:3;right:20px;top:20px;background:var(--acid);border:2px solid #111;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;font-weight:900}
+.shows-list{border-top:2px solid #111}
+.show-row{display:grid;grid-template-columns:140px 1fr 160px;gap:30px;align-items:center;padding:30px 0;border-bottom:2px solid #111}
+.show-row .date{font:70px/.7 Anton}
+.show-row h3{font:42px/.9 Anton;margin:5px 0}
+.show-row small{font-size:10px;font-weight:900}
+.show-row a{justify-self:end;border:2px solid #111;background:var(--acid);padding:15px 18px;font-size:10px;font-weight:900}
+.shop-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.shop-feature{min-height:600px;border:2px solid #111;position:relative;overflow:hidden}
+.shop-feature img{transition:.6s}
+.shop-feature:hover img{transform:scale(1.04)}
+.shop-feature .shop-label{position:absolute;z-index:2;left:25px;bottom:25px;font:70px/.8 Anton;color:#fff;text-shadow:3px 3px 0 #111}
+.shop-side{background:var(--pink);border:2px solid #111;padding:55px;display:flex;flex-direction:column;justify-content:center}
+.shop-side h2{font:clamp(80px,10vw,150px)/.76 Anton;margin:0 0 25px}
+.contact-box{background:var(--acid);border:3px solid #111;padding:40px;box-shadow:12px 12px 0 #111}
+.contact-box h3{font:60px/.8 Anton;margin:0 0 20px}
+.contact-box a{font-weight:900;border-bottom:2px solid #111}
+@media(max-width:900px){
+ .page-hero{min-height:55vh;padding:120px 17px 45px}.page-hero .eyebrow{top:85px;left:17px}.page-hero .hero-shape{width:55vw;height:55vw;right:-10vw;top:20%}
+ .page-intro{grid-template-columns:1fr;gap:30px}.page-wrap{padding:60px 17px}
+ .release-list,.video-grid,.shop-grid{grid-template-columns:1fr}.release-card{min-height:430px}
+ .show-row{grid-template-columns:80px 1fr;gap:18px}.show-row a{grid-column:2;justify-self:start}.show-row .date{font-size:48px}
+ .shop-side{padding:35px}
+}
+
+.reveal{opacity:0;transform:translateY(30px);transition:.7s ease}.reveal.in{opacity:1;transform:none}
